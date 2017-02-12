@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+	@-webkit-keyframes mycolor{
+		0%{
+			background-color: red;
+			width: 200px;
+		}
+		30%{
+			background-color: orange;
+			width: 100px;
+			height: 200px;
+		}
+		60%{
+			background-color: yellow;
+		}
+		100%{
+			background-color: green;
+		}
+	}
+
+	div:hover{
+		-webkit-animation:mycolor 5s linear;
+	}
+
+</style>
+<body>
+	
+	<div></div>
+<script type="text/javascript">
+
+function Foo() {
+    getName = function () { alert (1); };
+    return this;
+}
+
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3); return 2;};
+var getName = function () { alert (4);};
+function getName() { alert (5);}
+
+
+a=new Foo().getName();
+</script>
+</body>
+</html>
